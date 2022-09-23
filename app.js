@@ -76,9 +76,8 @@ app.use("/usuarios", usuarios);
 
 
 app.get("/", async (req, res) => {
-  await Postagem.find()
+  await Postagem.find().sort({NOME:1})
     .populate("categoria")
-    .sort({ data: "desc" })
     .then((postagens) => {
       Categoria.find().then((cat) => {
         res.render("index", {
@@ -115,9 +114,9 @@ app.get("/books", async (req, res) => {
 
   
     let posts = await Postagem.find({NOME: {$regex: new RegExp(escapeRegExp(payload), 'i')}}).populate("categoria")
-      
+      console.log(posts)
     let cat = await Categoria.find({Slug: posts.NOME})
-    res.render("Books", { proPlayer: posts, cat: cat, styles: "index.css" });
+    res.render("Books", { postagens: posts, cat: cat, styles: "index.css" });
 
     });
 
