@@ -14,11 +14,7 @@
     <h1>Bem-vindo a biblioteca</h1>
 
     <div class="box-form">
-<<<<<<< HEAD
-      <form action="/books" method="post">
-=======
       <form action="/books" method="GET">
->>>>>>> f6a77c6bf309fd26ab3950476ffa4b9dea84b997
         <input
           type="text"
           class="form-control"
@@ -34,7 +30,7 @@
 
   {{!-- <h2 >Livros: </h2> --}}
 
-<<<<<<< HEAD
+
   <div class="card-deck m-0 row row-cols g-2">
 
     {{#each postagens}}
@@ -51,37 +47,12 @@
           </div>
           <div class="card-footer fw-bolder">{{categoria.nome}}</div>
         </div>
-=======
-  <section class="content-down">
-    {{#each postagens}}
-      <div class="card-one">
-        <div class="card-body-one">
-            <h4>{{NOME}}</h4>
-            <p>{{AUTOR}}</p>
-        </div>
-        <div class="card-mid-one">
-           <a href="/postagem/{{AUTOR}}">
-                 <button>Leia mais</button>
-            </a>
-        </div>
 
-        <div class="card-body-down">
-            <h5>{{categoria.nome}}</h5>
-            <small>Data de publicação: {{categoria.nome}}</small>
-        </div>
-           
->>>>>>> f6a77c6bf309fd26ab3950476ffa4b9dea84b997
       </div>
     {{else}}
       <h5>Nenhum Livro encontrado!</h5>
-<<<<<<< HEAD
     {{/each}}
     
   </div>
 </section>
-=======
-    {{/each}} 
 
-  </section> 
-</section>
->>>>>>> f6a77c6bf309fd26ab3950476ffa4b9dea84b997
