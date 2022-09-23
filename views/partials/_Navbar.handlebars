@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg nav-style gap-3 fixed-top">
+  <div class="container-fluid gap-3">
+    <a class="navbar-brand" href="/">Biblioteca</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse mt-2" id="navbarNavDropdown">
+
+      <div class="content-main-nav">
+        <div class="select-nav">
+          <a type="button" class="btn btn-outline-warning" href="/categorias">Gêneros</a>
+        </div>
+        {{!-- Admin --}}
+        <div class="content-nav-admin">
+          {{#if user}}
+          <li class="nav-item">
+            <a href="/usuarios/logout" class="nav-link text-white">
+              <button type="button" class="btn btn-danger">Sair</button>
+            </a>
+          </li>
+          {{else}}
+          <li class="nav-item">
+
+            <a href="/usuarios/login" class="nav-link text-white">
+              <button type="button" class="btn btn-success">Admin</button>
+            </a>
+          </li>
+
+          {{/if}}
+
+          {{#if user.eAdmin}}
+          <li class="nav-item">
+            <a href="/admin/categorias" class="nav-link text-white">
+              <button type="button" class="btn btn-warning">Categorias</button>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="/admin/postagens" class="nav-link text-white">
+              <button type="button" class="btn btn-info">Livros</button>
+            </a>
+          </li>
+          {{/if}}
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</nav>
+

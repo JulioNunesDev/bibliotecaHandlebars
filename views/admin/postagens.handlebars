@@ -1,0 +1,53 @@
+<h2 class="titulo">Lista de Livros:</h2>
+<hr class="my-3">
+<a href="/admin/postagens/add">
+	<button class="btn btn-success ms-2">Novo Livro</button>
+</a>
+<hr class="my-3">
+
+<<<<<<< HEAD
+<div class="box-seach">
+	<form action="/admin/postagensInput" method="post">
+		<input type="text" class="form-control" name="livroID" placeholder="Nome do livro" />
+		<button type="submit">Pesquisar</button>
+	</form>
+</div>
+=======
+
+ <div class="box-seach">
+      <form action="/admin/postagensquery" method="get">
+        <input
+          type="text"
+          class="form-control"
+          name="livroID"
+          placeholder="Nome do livro"
+        />
+        <button type="submit">Pesquisar</button>
+      </form>
+    </div>
+>>>>>>> f6a77c6bf309fd26ab3950476ffa4b9dea84b997
+
+<div class="card-deck m-0 row row-cols g-2">
+
+	{{#each postagens}}
+	<div class="col">
+		<div class="card shadow-sm border-none h-100">
+			<div class="card-body">
+
+				<h4>{{NOME}}</h4>
+				<small>Data: {{DATA}}</small><br>
+				<small>Categoria: {{categoria.nome}}</small><br>
+				<div class="mt-3">
+					<a href="/admin/postagens/edit/{{_id}}"><button class="btn btn-success">Editar Livro</button></a>
+					<a href="/admin/postagens/deletar/{{_id}}"><button class="btn btn-danger">Deletar Livro</button></a>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+	{{else}}
+	<h5>Nenhuma categoria registrada!</h5>
+	{{/each}}
+
+</div>

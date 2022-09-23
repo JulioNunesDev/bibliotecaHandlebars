@@ -1,0 +1,101 @@
+<<<<<<< HEAD
+{{#each erros}}
+<div class="alert alert-danger">{{erros}}</div>
+=======
+
+{{#each erros}}
+  <div class="alert alert-danger">{{erros}}</div>
+>>>>>>> f6a77c6bf309fd26ab3950476ffa4b9dea84b997
+{{else}}
+
+{{/each}}
+<section class="conteiner-main">
+  <div class="content-top">
+    <div>
+<<<<<<< HEAD
+      <img src="https://media.discordapp.net/attachments/945491578410119180/1016434487279763567/logo.png"
+        alt="Instituo de Educação - Professor. Manuel Marinho" />
+=======
+      <img
+        src="https://media.discordapp.net/attachments/945491578410119180/1016434487279763567/logo.png"
+        alt="Instituo de Educação - Professor. Manuel Marinho"
+      />
+>>>>>>> f6a77c6bf309fd26ab3950476ffa4b9dea84b997
+    </div>
+    <h1>Bem-vindo a biblioteca</h1>
+
+    <div class="box-form">
+      <form action="/books" method="GET">
+<<<<<<< HEAD
+        <input type="text" class="form-control" name="payload" placeholder="Nome do livro" />
+=======
+        <input
+          type="text"
+          class="form-control"
+          name="payload"
+          placeholder="Nome do livro"
+        
+        />
+>>>>>>> f6a77c6bf309fd26ab3950476ffa4b9dea84b997
+        <button type="submit">Pesquisar</button>
+      </form>
+    </div>
+
+  </div>
+
+<<<<<<< HEAD
+
+  <div class="card-deck m-0 row row-cols g-2">
+
+    {{#each proPlayer}}
+    {{#if (NOME.includes(nome))}}
+    <div class="col">
+      <div class="card shadow-sm border-none h-100">
+        <div class="card-body">
+          <h5 class="card-title text fw-bold">{{NOME}}</h5>
+          <h6 class="card-subtitle text mb-2">{{AUTOR}}</h6>
+          <div class="card-mid-one">
+            <a href="/postagem/{{AUTOR}}">
+              <button type="button" class="btn btn-outline-danger w-auto">Leia mais</button>
+            </a>
+          </div>
+        </div>
+        <div class="card-footer fw-bolder">{{categoria.nome}}</div>
+      </div>
+    </div>
+    {{/if}}
+    {{else}}
+    <h5>Nenhum Livro encontrado!</h5>
+
+    {{/each}}
+
+  </div>
+=======
+  {{!-- <h2 >Livros: </h2> --}}
+
+  <section class="content-down">
+    {{#each proPlayer}}
+      <div class="card-one">
+        <div class="card-body-one">
+            <h4>{{NOME}}</h4>
+            <p>{{AUTOR}}</p>
+        </div>
+        <div class="card-mid-one">
+           <a href="/postagem/{{AUTOR}}">
+                 <button>Leia mais</button>
+            </a>
+        </div>
+
+        <div class="card-body-down">
+            <h5>{{categoria.nome}}</h5>
+        </div>
+           
+      </div>
+
+    {{else}}
+      <h5>Nenhum Livro encontrado!</h5>
+    {{/each}} 
+
+  </section> 
+>>>>>>> f6a77c6bf309fd26ab3950476ffa4b9dea84b997
+</section>

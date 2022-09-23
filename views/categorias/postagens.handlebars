@@ -1,0 +1,23 @@
+<h2 class="titulo">{{cat.nome}}</h2>
+
+  <div class="card-deck m-0 row row-cols g-2">
+
+    {{#each postagens}}
+      <div class="col">
+        <div class="card shadow-sm border-none h-100">
+          <div class="card-body">
+            <h5 class="card-title text fw-bold">{{NOME}}</h5>
+            <h6 class="card-subtitle text mb-2">{{AUTOR}}</h6>
+            <div class="card-mid-one">
+              <a href="/postagem/{{AUTOR}}">
+                    <button type="button" class="btn btn-outline-danger w-auto">Leia mais</button>
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    {{else}}
+      <h5>Nenhum Livro encontrado!</h5>
+    {{/each}}
+    
+  </div>

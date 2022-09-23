@@ -1,0 +1,35 @@
+<h2 class="titulo">Lista de Livros:</h2>
+<hr class="m-0">
+<a href="/admin/postagens">
+	<button class="btn btn-warning m-3">Voltar</button>
+</a>
+<hr class="m-0">
+
+ <div class="box-seach">
+      <form action="/admin/postagensquery" method="get">
+        <input
+          type="text"
+          class="form-control"
+          name="livroID"
+          placeholder="Nome do livro"
+        />
+        <button type="submit">Pesquisar</button>
+      </form>
+    </div>
+
+<section class="categorias">
+{{#each postagens}}
+	<div class="card mt-4">
+		<div class="card-body">
+			<h4>{{NOME}}</h4>
+			<p>Descrição: {{DESCRICAO}}</p>
+			<small>Data: {{DATA}}</small><br>
+			<small>Categoria: {{categoria.nome}}</small><br>
+			<a href="/admin/postagens/edit/{{_id}}"><button class="btn btn-success mt-3">Editar Livro</button></a>
+			<a href="/admin/postagens/deletar/{{_id}}"><button class="btn btn-danger mt-3">Deletar Livro</button></a>
+		</div>
+	</div>
+{{else}}
+<p>Nenhum Livro registrado!</p>
+{{/each}}
+</section>

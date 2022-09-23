@@ -1,0 +1,17 @@
+<h2 class="titulo">Categorias: </h2>
+
+<div class="card-deck m-0 row row-cols g-2">
+
+  {{#each cat}}
+      <div class="col">
+        <div class="card shadow-sm border-none h-100">
+          <a href="/categorias/{{slug}}" class="card-body text-decoration-none">
+            <h5 class="card-title text fw-bold">{{nome}}</h5>
+          </a>
+        </div>
+      </div>
+  {{else}}
+    <h5>Nenhum categoria encontrada!</h5>
+  {{/each}}
+  
+</div>
